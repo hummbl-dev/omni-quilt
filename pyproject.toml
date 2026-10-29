@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omni-quilt"
+version = "0.1.0"
+description = "Visual multi-modal attention and storyboard generator for omni-modal LLMs (Gemini, GPT-4o, Claude 3.5)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "HUMMBL", email = "238336761+hummbl-dev@users.noreply.github.com" }
+]
+keywords = ["multimodal", "vision", "gemini", "gpt-4o", "storyboard", "ffmpeg", "attention", "parallax-quilt"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Multimedia :: Video",
+]
+dependencies = []
+
+[project.scripts]
+omni-quilt = "omni_quilt.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["omni_quilt*"]
